@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite xmlns:con="http://eviware.com/soapui/config" id="1a9c6bd6-916a-4217-bceb-85d9485e5541" name="Productos 2">
+  <con:settings id="6484fe1c-bdee-4822-8c5b-3431d53bfa18">
+    <con:setting id="44ea909c-044a-464f-b08d-869048c1c0d2fileName">Productos</con:setting>
+    <con:setting id="1a9c6bd6-916a-4217-bceb-85d9485e5541fileName">Productos-2</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>
