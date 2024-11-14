@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase xmlns:con="http://eviware.com/soapui/config" id="93805287-73df-492f-a57f-0cc8b51ad7a0" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Obtengo token USER" searchProperties="true" timeout="0">
-  <con:settings id="b8cb424a-32d1-4a64-bfcf-a24144919e61">
+<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="93805287-73df-492f-a57f-0cc8b51ad7a0" keepSession="false" name="Obtengo token USER" searchProperties="true" timeout="0">
+  <con:settings id="e404e3c6-6919-4ef3-82df-206bf6f6214c">
     <con:setting id="e0fbd290-a739-4562-a8ef-da5b0e2428d8fileName">Obtengo-token-USER</con:setting>
     <con:setting id="93805287-73df-492f-a57f-0cc8b51ad7a0fileName">Obtengo-token-USER</con:setting>
   </con:settings>
-  <con:testStep type="restrequest" name="login USER" id="047977aa-271a-4679-aaf0-15727a8c3e46">
+  <con:testStep id="047977aa-271a-4679-aaf0-15727a8c3e46" name="login USER" type="restrequest">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="Products Management API" resourcePath="/auth/login" methodName="login" xsi:type="con:RestRequestStep">
-      <con:restRequest name="login USER" id="f63b9cfe-3d0a-4383-a2b2-4d675f1bd254" mediaType="application/json" postQueryString="false">
+    <con:config xsi:type="con:RestRequestStep" methodName="login" resourcePath="/auth/login" service="Products Management API">
+      <con:restRequest id="f63b9cfe-3d0a-4383-a2b2-4d675f1bd254" mediaType="application/json" name="login USER" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -17,18 +17,18 @@
   "password" : "upass"\r
 }</con:request>
         <con:originalUri>http://localhost/auth/login</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="27b37cd5-b236-4af2-a276-ffe90c56a947" name="Valid HTTP Status Codes">
+        <con:assertion id="27b37cd5-b236-4af2-a276-ffe90c56a947" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="56311612-58bd-4d63-bdfd-9ccb024aedd5" name="Response SLA">
+        <con:assertion id="56311612-58bd-4d63-bdfd-9ccb024aedd5" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>200</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="JsonPath RegEx Match" id="85e874b2-cf35-4119-801c-3c3da3c3e14b" name="JSONPath RegEx Match">
+        <con:assertion id="85e874b2-cf35-4119-801c-3c3da3c3e14b" name="JSONPath RegEx Match" type="JsonPath RegEx Match">
           <con:configuration>
             <path>$['accessToken']</path>
             <content>true</content>
@@ -47,10 +47,10 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="actualizar Prop Token" id="87e28629-05a1-41ab-8b31-ae8633c3fbf6">
+  <con:testStep id="87e28629-05a1-41ab-8b31-ae8633c3fbf6" name="actualizar Prop Token" type="transfer">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:PropertyTransfersStep">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+    <con:config xsi:type="con:PropertyTransfersStep">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>token</con:name>
         <con:sourceType>Response</con:sourceType>
         <con:sourceStep>login USER</con:sourceStep>
