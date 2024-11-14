@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="93805287-73df-492f-a57f-0cc8b51ad7a0" keepSession="false" name="Obtengo token USER" searchProperties="true" timeout="0">
-  <con:settings id="b33f944b-42dd-4083-912f-74380cfca594">
+<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="aac24724-aa91-4a9e-91e3-3f247f659f09" keepSession="false" name="Obtengo token USER" searchProperties="true" timeout="0">
+  <con:settings id="3f7d4f1c-ba40-4109-925d-27e5de592ce0">
     <con:setting id="e0fbd290-a739-4562-a8ef-da5b0e2428d8fileName">Obtengo-token-USER</con:setting>
-    <con:setting id="93805287-73df-492f-a57f-0cc8b51ad7a0fileName">Obtengo-token-USER</con:setting>
+    <con:setting id="aac24724-aa91-4a9e-91e3-3f247f659f09fileName">Obtengo-token-USER</con:setting>
   </con:settings>
-  <con:testStep id="047977aa-271a-4679-aaf0-15727a8c3e46" name="login USER" type="restrequest">
+  <con:testStep id="0e9da1b4-6782-4abe-8442-a1311d68a4bc" name="login USER" type="restrequest">
     <con:settings/>
     <con:config xsi:type="con:RestRequestStep" methodName="login" resourcePath="/auth/login" service="Products Management API">
       <con:restRequest id="f63b9cfe-3d0a-4383-a2b2-4d675f1bd254" mediaType="application/json" name="login USER" postQueryString="false">
@@ -47,7 +47,7 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep id="87e28629-05a1-41ab-8b31-ae8633c3fbf6" name="actualizar Prop Token" type="transfer">
+  <con:testStep id="3545ee3e-b2b6-4a0a-9b66-e90331ad5f3d" name="actualizar Prop Token" type="transfer">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep">
       <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">

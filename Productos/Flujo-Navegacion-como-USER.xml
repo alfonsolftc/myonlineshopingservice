@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="b7c61f57-a24a-4cdc-a669-09d81cd1ce53" keepSession="false" name="Flujo Navegacion como USER" searchProperties="true" timeout="0">
-  <con:settings id="cfdc70aa-c367-4dc9-bea0-033fa361072d">
+  <con:settings id="cb794537-c600-458a-a519-a1988db897fe">
     <con:setting id="b7c61f57-a24a-4cdc-a669-09d81cd1ce53fileName">Flujo-Navegacion-como-USER</con:setting>
   </con:settings>
   <con:testStep id="41023d80-f914-42c3-a0ae-5e1bef28ea16" name="ejecutar Login USER" type="calltestcase">

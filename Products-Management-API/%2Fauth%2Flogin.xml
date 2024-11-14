@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="61928a68-b42c-4b90-a6bd-ca147b962e84" name="/auth/login" path="/auth/login">
-  <con:settings id="641e9cc3-61e9-4c37-8d6b-f7699331b63d">
+<con:resource xmlns:con="http://eviware.com/soapui/config" id="61928a68-b42c-4b90-a6bd-ca147b962e84" name="/auth/login" path="/auth/login">
+  <con:settings id="b540160c-c803-40d8-bee8-3883344c5215">
     <con:setting id="61928a68-b42c-4b90-a6bd-ca147b962e84fileName">%2Fauth%2Flogin</con:setting>
   </con:settings>
   <con:parameters/>
