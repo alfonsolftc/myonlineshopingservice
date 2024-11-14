@@ -87,4 +87,135 @@
     </con:oAuth20AuthEntry>
   </con:authRepository>
   <con:tags/>
+  <con:soapui-project id="0ef11133-db6c-4e68-8fe3-71132239175c" created="3.56.0" activeEnvironment="Default environment" encryptionMode="Not encrypted" name="MyOnlineShoppingServiceAlfonso" authProfile="Rol user" projectVersion="" updated="3.56.0" compositeProjectFormat="1.3">
+    <con:settings>
+      <con:setting id="0ef11133-db6c-4e68-8fe3-71132239175cfileName">MyOnlineShoppingService-readyapi-project</con:setting>
+    </con:settings>
+    <con:requirements/>
+    <con:properties/>
+    <con:wssContainer/>
+    <con:databaseConnectionContainer/>
+    <con:jmsConnectionContainer/>
+    <con:oAuth2ProfileContainer>
+      <con:oAuth2Profile>
+        <con:name>Rol user</con:name>
+        <con:type>OAuth 2.0</con:type>
+        <con:accessToken>eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxLHVzZXJAZW1haWwuY29tIiwicm9sZSI6IlVTRVIiLCJpc3MiOiJjb20ubWljcm9jb21wYW55IiwiaWF0IjoxNzMwNzk0MzgzLCJleHAiOjE3MzA4ODA3ODN9.7qoRcSLJl8GI6uj9FWqp_X1mRagrhuWJ4aY-yzIb0HI9LFzkt32wZOGcYXUGPu3OOnJ02RWX5srBUZXKZCN-jA</con:accessToken>
+        <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+        <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
+        <con:oAuth2Flow>JWT_GRANT</con:oAuth2Flow>
+        <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+        <con:jwtConfiguration/>
+        <con:responseType>id_token</con:responseType>
+      </con:oAuth2Profile>
+      <con:oAuth2Profile>
+        <con:name>Rol admin</con:name>
+        <con:type>OAuth 2.0</con:type>
+        <con:accessToken>eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyLGFkbWluQGVtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlzcyI6ImNvbS5taWNyb2NvbXBhbnkiLCJpYXQiOjE3MzA3OTQ2MDgsImV4cCI6MTczMDg4MTAwOH0.flUcU1MwfHPJKu5ULfIaVQxHv8YLOEJcEuJxQ7RtSucqODoz1FzMxua_B1icWgEgKBacIG9w_MSsrwThMaExxQ</con:accessToken>
+        <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+        <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
+        <con:oAuth2Flow>JWT_GRANT</con:oAuth2Flow>
+        <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+        <con:jwtConfiguration/>
+        <con:responseType>id_token</con:responseType>
+      </con:oAuth2Profile>
+    </con:oAuth2ProfileContainer>
+    <con:oAuth1ProfileContainer/>
+    <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+      <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+    </con:eventHandlers>
+    <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+      <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+    </con:eventHandlers>
+    <con:authRepository>
+      <con:oAuth20AuthEntry>
+        <con:name>Rol user</con:name>
+        <con:type>OAuth 2.0</con:type>
+        <con:accessToken>eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxLHVzZXJAZW1haWwuY29tIiwicm9sZSI6IlVTRVIiLCJpc3MiOiJjb20ubWljcm9jb21wYW55IiwiaWF0IjoxNzMwNzk0MzgzLCJleHAiOjE3MzA4ODA3ODN9.7qoRcSLJl8GI6uj9FWqp_X1mRagrhuWJ4aY-yzIb0HI9LFzkt32wZOGcYXUGPu3OOnJ02RWX5srBUZXKZCN-jA</con:accessToken>
+        <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+        <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
+        <con:oAuth2Flow>JWT_GRANT</con:oAuth2Flow>
+        <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+        <con:jwtConfiguration/>
+        <con:responseType>id_token</con:responseType>
+      </con:oAuth20AuthEntry>
+      <con:oAuth20AuthEntry>
+        <con:name>Rol admin</con:name>
+        <con:type>OAuth 2.0</con:type>
+        <con:accessToken>eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyLGFkbWluQGVtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlzcyI6ImNvbS5taWNyb2NvbXBhbnkiLCJpYXQiOjE3MzA3OTQ2MDgsImV4cCI6MTczMDg4MTAwOH0.flUcU1MwfHPJKu5ULfIaVQxHv8YLOEJcEuJxQ7RtSucqODoz1FzMxua_B1icWgEgKBacIG9w_MSsrwThMaExxQ</con:accessToken>
+        <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+        <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
+        <con:oAuth2Flow>JWT_GRANT</con:oAuth2Flow>
+        <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+        <con:jwtConfiguration/>
+        <con:responseType>id_token</con:responseType>
+      </con:oAuth20AuthEntry>
+    </con:authRepository>
+    <con:tags/>
+    <con:interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RestService" id="c6308d89-d26a-489b-8911-43282470f9f9" name="Products Management API" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" definitionUrl="http://localhost:9090/v3/api-docs">
+      <con:description id="f5fc1e9f-81ee-4bcd-bc51-1ee21405be65">This API exposes endpoints to manage products.</con:description>
+      <con:settings id="854b273b-90f3-48eb-8064-f43534fd0cc6">
+        <con:setting id="c6308d89-d26a-489b-8911-43282470f9f9fileName">Products-Management-API</con:setting>
+      </con:settings>
+      <con:definitionCache type="TEXT" rootPart="http://localhost:9090/v3/api-docs">
+        <con:part>
+          <con:url>http://localhost:9090/v3/api-docs</con:url>
+          <con:content>{"openapi":"3.0.1","info":{"title":"Products Management API","description":"This API exposes endpoints to manage products.","termsOfService":"https://www.netmind.es/terms","contact":{"name":"Contact name","url":"https://www.netmind.es","email":"contact@c.com"},"license":{"name":"MIT License","url":"https://choosealicense.com/licenses/mit/"},"version":"1.0"},"servers":[{"url":"http://localhost:9090","description":"Server URL in Development environment"},{"url":"https://localhost:8443","description":"Server URL in Production environment"}],"security":[{"Bearer Authentication":[]}],"tags":[{"name":"Endpoints de productos","description":"Usa estos endpoints para crear y consumir productos"},{"name":"Endpoint de identificación","description":"Usa este endpoint para identificarte con tu email y contraseña"},{"name":"Endpoints de usuarios","description":"Usa estos endpoints para crear y consumir usuarios"}],"paths":{"/users/{uid}":{"get":{"tags":["Endpoints de usuarios"],"operationId":"getOne","parameters":[{"name":"uid","in":"path","required":true,"style":"simple","explode":false,"schema":{"minimum":1,"type":"integer","format":"int32"}}],"responses":{"412":{"description":"Precondition Failed","content":{"*/*":{"schema":{"oneOf":[{"type":"object","additionalProperties":{"type":"string"}},{"$ref":"#/components/schemas/StatusMessage"},{"type":"string"}]}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/Usuario"}}}}}},"put":{"tags":["Endpoints de usuarios"],"operationId":"updateUser","parameters":[{"name":"uid","in":"path","required":true,"style":"simple","explode":false,"schema":{"type":"integer","format":"int32"}},{"name":"aUser","in":"query","required":true,"style":"form","explode":true,"schema":{"$ref":"#/components/schemas/Usuario"}}],"responses":{"412":{"description":"Precondition Failed","content":{"*/*":{"schema":{"oneOf":[{"type":"object","additionalProperties":{"type":"string"}},{"$ref":"#/components/schemas/StatusMessage"},{"type":"string"}]}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"type":"string"}}}}}},"delete":{"tags":["Endpoints de usuarios"],"operationId":"deleteUser","parameters":[{"name":"uid","in":"path","required":true,"style":"simple","explode":false,"schema":{"type":"integer","format":"int32"}}],"responses":{"412":{"description":"Precondition Failed","content":{"*/*":{"schema":{"oneOf":[{"type":"object","additionalProperties":{"type":"string"}},{"$ref":"#/components/schemas/StatusMessage"},{"type":"string"}]}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"type":"string"}}}}}}},"/products/{pid}":{"get":{"tags":["Endpoints de productos"],"summary":"Obtener un producto","description":"Endpoint para obtener un producto concreto","operationId":"getOne_1","parameters":[{"name":"pid","in":"path","description":"El identificador del producto","required":true,"style":"simple","explode":false,"schema":{"minimum":1,"type":"integer","format":"int64"},"example":234}],"responses":{"412":{"description":"Precondition Failed","content":{"*/*":{"schema":{"oneOf":[{"type":"object","additionalProperties":{"type":"string"}},{"$ref":"#/components/schemas/StatusMessage"},{"type":"string"}]}}}},"200":{"description":"Todo bien","content":{"*/*":{"schema":{"$ref":"#/components/schemas/Producto"}}}},"404":{"description":"El producto no existe","content":{"*/*":{"schema":{"$ref":"#/components/schemas/Producto"}}}}}},"put":{"tags":["Endpoints de productos"],"operationId":"updateProduct","parameters":[{"name":"pid","in":"path","required":true,"style":"simple","explode":false,"schema":{"type":"integer","format":"int64"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/Producto"}}},"required":true},"responses":{"412":{"description":"Precondition Failed","content":{"*/*":{"schema":{"oneOf":[{"type":"object","additionalProperties":{"type":"string"}},{"$ref":"#/components/schemas/StatusMessage"},{"type":"string"}]}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"type":"string"}}}}}},"delete":{"tags":["Endpoints de productos"],"operationId":"deleteProduct","parameters":[{"name":"pid","in":"path","required":true,"style":"simple","explode":false,"schema":{"type":"integer","format":"int64"}}],"responses":{"412":{"description":"Precondition Failed","content":{"*/*":{"schema":{"oneOf":[{"type":"object","additionalProperties":{"type":"string"}},{"$ref":"#/components/schemas/StatusMessage"},{"type":"string"}]}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"type":"string"}}}}}}},"/users":{"get":{"tags":["Endpoints de usuarios"],"operationId":"getAllUsers","responses":{"412":{"description":"Precondition Failed","content":{"*/*":{"schema":{"oneOf":[{"type":"object","additionalProperties":{"type":"string"}},{"$ref":"#/components/schemas/StatusMessage"},{"type":"string"}]}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/Usuario"}}}}}}},"post":{"tags":["Endpoints de usuarios"],"operationId":"createUser","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/Usuario"}}},"required":true},"responses":{"412":{"description":"Precondition Failed","content":{"*/*":{"schema":{"oneOf":[{"type":"object","additionalProperties":{"type":"string"}},{"$ref":"#/components/schemas/StatusMessage"},{"type":"string"}]}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"type":"string"}}}}}}},"/products":{"get":{"tags":["Endpoints de productos"],"operationId":"getAll","parameters":[{"name":"text","in":"query","required":false,"style":"form","explode":true,"schema":{"type":"string"}}],"responses":{"412":{"description":"Precondition Failed","content":{"*/*":{"schema":{"oneOf":[{"type":"object","additionalProperties":{"type":"string"}},{"$ref":"#/components/schemas/StatusMessage"},{"type":"string"}]}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/Producto"}}}}}}}},"/auth/login":{"post":{"tags":["Endpoint de identificación"],"operationId":"login","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/AuthRequest"}}},"required":true},"responses":{"412":{"description":"Precondition Failed","content":{"*/*":{"schema":{"oneOf":[{"type":"object","additionalProperties":{"type":"string"}},{"$ref":"#/components/schemas/StatusMessage"},{"type":"string"}]}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"type":"object"}}}}}}}},"components":{"schemas":{"StatusMessage":{"type":"object","properties":{"status_code":{"type":"integer","format":"int32"},"message":{"type":"string"}}},"Usuario":{"type":"object","properties":{"uid":{"type":"integer","format":"int32"},"email":{"type":"string"},"password":{"type":"string"},"role":{"type":"string","enum":["USER","ADMIN","GESTOR","CLIENTE"]}},"description":"Representa un usuario del sistema"},"Producto":{"required":["name","serial"],"type":"object","properties":{"Id":{"type":"integer","description":"El identificador único del producto. Debe ser un número mayor que 0. No es requerido en POST y PUT","format":"int64","example":234},"name":{"maxLength":20,"minLength":3,"type":"string"},"serial":{"type":"string"}},"description":"Representa un producto a intercambiar"},"AuthRequest":{"required":["email","password"],"type":"object","properties":{"email":{"type":"string"},"password":{"type":"string"}}}},"securitySchemes":{"Bearer_Authentication":{"type":"http","scheme":"bearer","bearerFormat":"JWT"}}}}</con:content>
+          <con:type>https://swagger.io/openapiv3/specification</con:type>
+        </con:part>
+      </con:definitionCache>
+      <con:endpoints>
+        <con:endpoint>http://localhost:9090</con:endpoint>
+        <con:endpoint>https://localhost:8443</con:endpoint>
+      </con:endpoints>
+    </con:interface>
+    <con:testSuite id="45f52032-342f-47a0-b1d0-cf3808ba1003" name="Identificacion">
+      <con:settings id="3e5beab1-fef0-4eb2-826d-ca0f78c22e08">
+        <con:setting id="45f52032-342f-47a0-b1d0-cf3808ba1003fileName">Identificacion</con:setting>
+      </con:settings>
+      <con:runType>SEQUENTIAL</con:runType>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testSuite>
+    <con:testSuite id="44ea909c-044a-464f-b08d-869048c1c0d2" name="Productos">
+      <con:settings id="6484fe1c-bdee-4822-8c5b-3431d53bfa18">
+        <con:setting id="44ea909c-044a-464f-b08d-869048c1c0d2fileName">Productos</con:setting>
+      </con:settings>
+      <con:runType>SEQUENTIAL</con:runType>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testSuite>
+    <con:testSuite id="5b5e599c-3161-4cc1-ac06-4da42f75a25d" name="Identificacion 2">
+      <con:settings id="3e5beab1-fef0-4eb2-826d-ca0f78c22e08">
+        <con:setting id="45f52032-342f-47a0-b1d0-cf3808ba1003fileName">Identificacion</con:setting>
+        <con:setting id="5b5e599c-3161-4cc1-ac06-4da42f75a25dfileName">Identificacion-2</con:setting>
+      </con:settings>
+      <con:runType>SEQUENTIAL</con:runType>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testSuite>
+  </con:soapui-project>
 </con:soapui-project>
