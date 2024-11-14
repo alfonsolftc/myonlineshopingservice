@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:soapui-workspace name="My Workspace" soapui-version="6.0.0" cid="4c243988-e156-46d2-a3d7-818650b2f18b" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
-  <con:project name="MyOnlineShoppingServiceAlfonso" lastOpened="2024-11-14T10:57:43.941+01:00">C:/Curso/workspace/colaboracion</con:project>
+  <con:project name="MyOnlineShoppingServiceAlfonso" lastOpened="2024-11-14T11:06:20.062+01:00">C:/Curso/workspace/colaboracion</con:project>
   <con:project name="Projecto Libros Demo" lastOpened="2024-11-14T10:38:50.672+01:00">C:/Curso/workspace/colaboracion</con:project>
   <con:recentItemCollection>
     <con:moduleId>SoapUiNGModule</con:moduleId>
     <con:itemId>45f52032-342f-47a0-b1d0-cf3808ba1003</con:itemId>
     <con:itemId>5b5e599c-3161-4cc1-ac06-4da42f75a25d</con:itemId>
     <con:itemId>e3ca9700-081b-40f6-99c0-609ac40bd4f3</con:itemId>
+    <con:itemId>44ea909c-044a-464f-b08d-869048c1c0d2</con:itemId>
   </con:recentItemCollection>
   <con:expandedTreeNodes>
-    <con:project path="C:\Curso\workspace\colaboracion">
-      <nodeId>0ef11133-db6c-4e68-8fe3-71132239175c</nodeId>
-    </con:project>
+    <con:project path="C:\Curso\workspace\colaboracion"/>
   </con:expandedTreeNodes>
   <con:overridenPropertyValuesCollection/>
 </con:soapui-workspace>
